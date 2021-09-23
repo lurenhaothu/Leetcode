@@ -11,26 +11,26 @@
 class Solution {
 public:
     ListNode* swapPairs(ListNode* head) {
-        ListNode *h, *p, *q, *cur;
-        h = head;
+        ListNode prehead(0, head);
+        ListNode *h, *cur, *p, *q;
+        h = &prehead;
         cur = h;
         do{
-            if(cur){
-                p = cur->next;
-                cur = p;
+            p = cur->next;
+            if(p){
+                q = p->next;
+                if(q){
+                    p->next = q->next;
+                    q->next = p;
+                    cur->next = q;
+                    cur = p;
+                }else{
+                    break;
+                }
             }else{
                 break;
             }
-            if(cur){
-                q = cur->next;
-                cur = q;
-            }else{
-                break;
-            }
-            if(cur){
-                cur = cur->next;
-            }
-        }while(1);
-        return h;
+        }while(cur);
+        return h->next;
     }
 };
