@@ -20,11 +20,25 @@ public:
                     OPT[i - 1][i + l - 2].push_back(new TreeNode(i));
                 }else{
                     for(int j = i; j <= i + l - 1; j++){
-                        
+                        if(j == i){
+                            for(int k = 0; k < OPT[i][i + l - 2].size(); k++){
+                                OPT[i - 1][i + l - 2].push_back(new TreeNode(j, 0, OPT[i][i + l - 2][k]));
+                            }
+                        }else if(j == i + l - 1){
+                            for(int k = 0; k < OPT[i - 1][i + l - 3].size(); k++){
+                                OPT[i - 1][i + l - 2].push_back(new TreeNode(j, OPT[i - 1][i + l - 3][k], 0));
+                            }
+                        }else{
+                            for(int k = 0; k < OPT[i - 1][j - 2].size(); k++){
+                                for(int t = 0; t < OPT[j][i + l - 2].size(); t++){
+                                    OPT[i - 1][i + l - 2].push_back(new TreeNode(j, OPT[i - 1][j - 2][k], OPT[j][i + l - 2][t]));
+                                }
+                            }
+                        }
                     }
                 }
             }
         }
-        return OPT[0][0];
+        return OPT[0][n - 1];
     }
 };
