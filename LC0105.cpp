@@ -9,6 +9,7 @@
  *     TreeNode(int x, TreeNode *left, TreeNode *right) : val(x), left(left), right(right) {}
  * };
  */
+//This problem can also be solve with stack
 class Solution {
 public:
     vector<int> p, i;
