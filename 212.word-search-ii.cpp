@@ -5,10 +5,6 @@
  */
 
 // @lc code=start
-#include<string>
-#include<unordered_map>
-using namespace std;
-
 class Trie{
 public:
     unordered_map<char, Trie*> dic;
