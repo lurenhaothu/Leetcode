@@ -3,6 +3,10 @@
         "vector": "cpp",
         "limits": "cpp",
         "utility": "cpp",
-        "xstring": "cpp"
+        "xstring": "cpp",
+        "queue": "cpp",
+        "deque": "cpp",
+        "list": "cpp",
+        "xutility": "cpp"
     }
 }
