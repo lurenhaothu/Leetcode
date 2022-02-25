@@ -8,6 +8,8 @@
         "deque": "cpp",
         "list": "cpp",
         "xutility": "cpp",
-        "string": "cpp"
+        "string": "cpp",
+        "stack": "cpp",
+        "algorithm": "cpp"
     }
 }
