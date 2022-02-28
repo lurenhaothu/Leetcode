@@ -10,6 +10,9 @@
         "xutility": "cpp",
         "string": "cpp",
         "stack": "cpp",
-        "algorithm": "cpp"
+        "algorithm": "cpp",
+        "initializer_list": "cpp",
+        "type_traits": "cpp",
+        "xtree": "cpp"
     }
 }
