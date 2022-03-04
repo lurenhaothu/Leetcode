@@ -17,3 +17,6 @@ public:
 };
 // @lc code=end
 
+(exp(t/tau)*int((exp(-x/tau)*(exp(x/tau) - 1)^((b*tau)/v0)*(exp(x/tau) + 1)^((b*tau)/v0)*(a*v0^2 + a*v0^2*exp(x/tau) + 
+
+D*b*tau*exp((2*x)/tau)))/(tau*v0^2*(exp(x/tau) + 1)), x, 0, t, 'IgnoreSpecialCases', true))/((exp(t/tau) - 1)^((b*tau)/v0 + 1)*(exp(t/tau) + 1)^((b*tau)/v0))
